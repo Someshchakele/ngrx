@@ -3,6 +3,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { customerincrement } from '../../shared/store/counter.action';
+import { CounterModel } from '../../shared/store/counter.model';
 @Component({
   selector: 'app-customercounter',
   standalone: true,
@@ -12,7 +13,7 @@ import { customerincrement } from '../../shared/store/counter.action';
 })
 
 export class Customercounter {
- constructor(private store: Store<{ counter: { counter: number } }>) { }
+ constructor(private store: Store<{ counter: CounterModel}>) { }
   counterInput!: number ;
 
   onIncrement() {

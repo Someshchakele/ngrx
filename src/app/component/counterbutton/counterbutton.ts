@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { decrement, increment, reset } from '../../shared/store/counter.action';
+import { changechannelname, decrement, increment, reset } from '../../shared/store/counter.action';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
@@ -22,6 +22,9 @@ export class Counterbutton {
   }
   onReset() {
      this.store.dispatch(reset())
+  }
+  onRename(){
+    this.store.dispatch(changechannelname({channel:'New Channel Name'}))
   }
 
 }
