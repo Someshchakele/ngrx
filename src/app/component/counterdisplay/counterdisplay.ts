@@ -4,11 +4,13 @@ import { CounterModel } from '../../shared/store/counter.model';
 import {  Observable, Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { getcounter } from '../../shared/store/counter.selector';
+import { Counterbutton } from "../counterbutton/counterbutton";
+import { Customercounter } from "../customercounter/customercounter";
 
 @Component({
   selector: 'app-counterdisplay',
    standalone: true,
-  imports: [CommonModule],   // ✅ REQUIRED
+  imports: [CommonModule, Counterbutton, Customercounter],   // ✅ REQUIRED
   templateUrl: './counterdisplay.html',
   styleUrl: './counterdisplay.css',
 })

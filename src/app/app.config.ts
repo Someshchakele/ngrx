@@ -5,13 +5,14 @@ import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { routes } from './app.routes';
 import { counterReducer } from './shared/store/counter.reducer';
+import { blogReducer } from './shared/store/Blog/blog.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideStore({counter:counterReducer}),
+    provideStore({counter:counterReducer,blog:blogReducer}),
     provideEffects([]),
     provideStoreDevtools({
       maxAge: 2,

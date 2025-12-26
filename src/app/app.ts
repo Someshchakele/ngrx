@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Counterdisplay } from "./component/counterdisplay/counterdisplay";
-import { Counterbutton } from "./component/counterbutton/counterbutton";
-import { Customercounter } from "./component/customercounter/customercounter";
+import { Layout } from "./layout/layout";
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Counterdisplay, Counterbutton, Customercounter],
+  imports: [RouterOutlet, MatSlideToggleModule,],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -1,0 +1,15 @@
+<h2>Technology Blogs</h2>
+
+@for (item of blogList; track $index) {
+<mat-card> 
+    <mat-card-header>
+        <h1>{{item.title}}</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <p>{{item.description}}</p>
+    </mat-card-content>
+</mat-card>
+
+}
+
+
